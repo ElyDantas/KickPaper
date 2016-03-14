@@ -196,7 +196,7 @@
 				TargetAttributes = {
 					7401A9111C92803B006C70D8 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 8N84EEX5L2;
+						DevelopmentTeam = H9TC5Y63FZ;
 					};
 					7401A9271C92803C006C70D8 = {
 						CreatedOnToolsVersion = 7.2;
@@ -406,10 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KickPaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = thecodeisonthetable.com.br.KickPaper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thecodeisonthetable.KickPaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -417,10 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KickPaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = thecodeisonthetable.com.br.KickPaper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thecodeisonthetable.KickPaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -491,6 +497,7 @@
 				7401A93E1C92803C006C70D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7401A93F1C92803C006C70D8 /* Build configuration list for PBXNativeTarget "KickPaperTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +506,7 @@
 				7401A9411C92803C006C70D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7401A9421C92803C006C70D8 /* Build configuration list for PBXNativeTarget "KickPaperUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +515,7 @@
 				7401A9441C92803C006C70D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
