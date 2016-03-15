@@ -9,7 +9,7 @@
 import UIKit
 
 class FoldersTableViewController: UITableViewController {
-    var folders = [String]()
+    var folders = [Disciplina]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,10 @@ class FoldersTableViewController: UITableViewController {
             
             if let text = textf.text{
                 if text != ""{
-                    DirectoryUtilites.createFolder(text)
+                    let disciplina = Disciplina()
+                    disciplina.nome = text
+                    DisciplinaDAO.insert(disciplina)
+
                     alert.dismissViewControllerAnimated(true, completion: {})
                     self.reloadFolders()
                 }
@@ -66,7 +69,7 @@ class FoldersTableViewController: UITableViewController {
     }
     
     func reloadFolders(){
-        folders = DirectoryUtilites.fetchAllFolder()
+        folders = DisciplinaDAO.fetchAllDisciplinas()
         tableView.reloadData()
     }
     
@@ -83,7 +86,7 @@ class FoldersTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("foldersTableCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = folders[indexPath.row]
+        cell.textLabel?.text = folders[indexPath.row].nome
         
         // Configure the cell...
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F27E6BD1C98B1030041BF78 /* FoldersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27E6BB1C98B1030041BF78 /* FoldersTableViewController.swift */; };
+		3F27E6BE1C98B1030041BF78 /* NewFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27E6BC1C98B1030041BF78 /* NewFolderViewController.swift */; };
+		3F27E6C01C98B1150041BF78 /* DirectoryUtilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27E6BF1C98B1150041BF78 /* DirectoryUtilites.swift */; };
 		3F6901E41C98920F00DFCF54 /* ConteudoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6901E31C98920F00DFCF54 /* ConteudoDAO.swift */; };
 		3F6901E61C98951000DFCF54 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6901E51C98951000DFCF54 /* DatabaseManager.swift */; };
 		3F69020B1C989D4900DFCF54 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F6902091C989D4900DFCF54 /* Model.xcdatamodeld */; };
@@ -46,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F27E6BB1C98B1030041BF78 /* FoldersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldersTableViewController.swift; sourceTree = "<group>"; };
+		3F27E6BC1C98B1030041BF78 /* NewFolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFolderViewController.swift; sourceTree = "<group>"; };
+		3F27E6BF1C98B1150041BF78 /* DirectoryUtilites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryUtilites.swift; sourceTree = "<group>"; };
 		3F6901E31C98920F00DFCF54 /* ConteudoDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudoDAO.swift; sourceTree = "<group>"; };
 		3F6901E51C98951000DFCF54 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		3F69020A1C989D4900DFCF54 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 		3FC72A1E1C97376F00D976F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3F27E6BF1C98B1150041BF78 /* DirectoryUtilites.swift */,
+				3F27E6BB1C98B1030041BF78 /* FoldersTableViewController.swift */,
+				3F27E6BC1C98B1030041BF78 /* NewFolderViewController.swift */,
 				7401A9171C92803B006C70D8 /* FirstViewController.swift */,
 				7401A9191C92803B006C70D8 /* SecondViewController.swift */,
 				3FC72A211C97433B00D976F0 /* AudioTableViewCell.swift */,
@@ -335,6 +344,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F27E6C01C98B1150041BF78 /* DirectoryUtilites.swift in Sources */,
+				3F27E6BD1C98B1030041BF78 /* FoldersTableViewController.swift in Sources */,
 				3F6902151C989EE100DFCF54 /* DisciplinaDAO.swift in Sources */,
 				3FC72A221C97433B00D976F0 /* AudioTableViewCell.swift in Sources */,
 				3F6901E61C98951000DFCF54 /* DatabaseManager.swift in Sources */,
@@ -347,6 +358,7 @@
 				3F6901E41C98920F00DFCF54 /* ConteudoDAO.swift in Sources */,
 				3FC66BE51C975C1100DA1F3F /* GravarAudioViewController.swift in Sources */,
 				3F6902101C989E2900DFCF54 /* Conteudo+CoreDataProperties.swift in Sources */,
+				3F27E6BE1C98B1030041BF78 /* NewFolderViewController.swift in Sources */,
 				7401A9181C92803B006C70D8 /* FirstViewController.swift in Sources */,
 				3F6902131C989E2900DFCF54 /* Disciplina.swift in Sources */,
 			);
