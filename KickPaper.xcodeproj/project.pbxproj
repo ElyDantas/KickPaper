@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F92733A1C973945004EF410 /* FoldersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9273391C973945004EF410 /* FoldersTableViewController.swift */; };
+		3F92733E1C973A38004EF410 /* DirectoryUtilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F92733D1C973A38004EF410 /* DirectoryUtilites.swift */; };
+		3F9273401C974CCC004EF410 /* NewFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F92733F1C974CCC004EF410 /* NewFolderViewController.swift */; };
 		7401A9161C92803B006C70D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401A9151C92803B006C70D8 /* AppDelegate.swift */; };
 		7401A9181C92803B006C70D8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401A9171C92803B006C70D8 /* FirstViewController.swift */; };
 		7401A91A1C92803B006C70D8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401A9191C92803B006C70D8 /* SecondViewController.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F9273391C973945004EF410 /* FoldersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldersTableViewController.swift; sourceTree = "<group>"; };
+		3F92733D1C973A38004EF410 /* DirectoryUtilites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryUtilites.swift; sourceTree = "<group>"; };
+		3F92733F1C974CCC004EF410 /* NewFolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFolderViewController.swift; sourceTree = "<group>"; };
 		7401A9121C92803B006C70D8 /* KickPaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickPaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7401A9151C92803B006C70D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7401A9171C92803B006C70D8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -99,10 +105,13 @@
 		7401A9141C92803B006C70D8 /* KickPaper */ = {
 			isa = PBXGroup;
 			children = (
+				3F92733D1C973A38004EF410 /* DirectoryUtilites.swift */,
 				7401A9151C92803B006C70D8 /* AppDelegate.swift */,
 				7401A9171C92803B006C70D8 /* FirstViewController.swift */,
 				7401A9191C92803B006C70D8 /* SecondViewController.swift */,
 				7401A91B1C92803B006C70D8 /* Main.storyboard */,
+				3F92733F1C974CCC004EF410 /* NewFolderViewController.swift */,
+				3F9273391C973945004EF410 /* FoldersTableViewController.swift */,
 				7401A91E1C92803C006C70D8 /* Assets.xcassets */,
 				7401A9201C92803C006C70D8 /* LaunchScreen.storyboard */,
 				7401A9231C92803C006C70D8 /* Info.plist */,
@@ -263,8 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7401A91A1C92803B006C70D8 /* SecondViewController.swift in Sources */,
+				3F9273401C974CCC004EF410 /* NewFolderViewController.swift in Sources */,
 				7401A9161C92803B006C70D8 /* AppDelegate.swift in Sources */,
+				3F92733A1C973945004EF410 /* FoldersTableViewController.swift in Sources */,
 				7401A9181C92803B006C70D8 /* FirstViewController.swift in Sources */,
+				3F92733E1C973A38004EF410 /* DirectoryUtilites.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
