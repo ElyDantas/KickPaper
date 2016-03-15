@@ -103,7 +103,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riJ-Hd-9uq">
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riJ-Hd-9uq">
                                 <rect key="frame" x="265" y="348" width="71" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="Bxc-NI-9vO"/>
@@ -120,6 +120,7 @@
                             <constraint firstItem="PpT-W0-ACZ" firstAttribute="centerX" secondItem="zF4-mr-JCE" secondAttribute="centerX" id="XN2-1Q-2qX"/>
                             <constraint firstItem="riJ-Hd-9uq" firstAttribute="top" secondItem="PpT-W0-ACZ" secondAttribute="bottom" constant="33" id="aaT-tq-1PB"/>
                             <constraint firstItem="PpT-W0-ACZ" firstAttribute="centerY" secondItem="zF4-mr-JCE" secondAttribute="centerY" id="f2N-cp-jag"/>
+                            <constraint firstItem="riJ-Hd-9uq" firstAttribute="centerX" secondItem="zF4-mr-JCE" secondAttribute="centerX" id="gjd-vb-TKB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Gravar Áudio" id="xQo-5m-kfj">

@@ -9,10 +9,12 @@
 import UIKit
 import AVFoundation
 
-class GravarAudioViewController: UIViewController {
+class GravarAudioViewController: UIViewController,AVAudioRecorderDelegate {
 
+    
     var contador:Int = -1
     var audioRecorder:AVAudioRecorder!
+    var recordedAudio:Conteudo!
     
     @IBOutlet weak var nomeGravacaoLabel: UITextField!
     @IBAction func recordButton(sender: UIButton) {
@@ -34,6 +36,7 @@ class GravarAudioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
     }
 
@@ -66,6 +69,7 @@ class GravarAudioViewController: UIViewController {
         let session = AVAudioSession.sharedInstance()
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
         try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
+        audioRecorder.delegate = self
         audioRecorder.meteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
@@ -94,6 +98,18 @@ class GravarAudioViewController: UIViewController {
     
     }
 
+    
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+        if flag{
+            let conteudo = Conteudo()
+            conteudo.filePathUrl = String(recorder.url)
+            conteudo.title = recorder.url.lastPathComponent
+            //conteudo.disciplina =
+            ConteudoDAO.insert(conteudo)
+            
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
