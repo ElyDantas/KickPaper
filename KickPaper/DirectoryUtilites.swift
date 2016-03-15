@@ -17,6 +17,8 @@ class DirectoryUtilites {
     
     static let kickPaper = DirectoryUtilites.documentsPath.URLByAppendingPathComponent("KickPaper")
 
+    static let teste = DirectoryUtilites.kickPaper.URLByAppendingPathComponent("Teste")
+
     
     static func hasAppFolder() -> Bool{
         if DirectoryUtilites.fileManager.fileExistsAtPath(DirectoryUtilites.kickPaper.path!){
@@ -34,10 +36,30 @@ class DirectoryUtilites {
             print(error.description)
         }
     }
-    
-    static func fetchAllFolder() -> [NSString]{
+
+    static func createFolderMassa(){
         do{
-            return try DirectoryUtilites.fileManager.contentsOfDirectoryAtPath(documentsPath.path!) as [NSString]
+            try fileManager.createDirectoryAtPath(DirectoryUtilites.teste.path!, withIntermediateDirectories: false, attributes:nil)
+        }catch let error as NSError{
+            print(error.description)
+        }
+    }
+
+    static func createFolder(folderName: String) -> Bool{
+        let newFolder = DirectoryUtilites.kickPaper.URLByAppendingPathComponent(folderName)
+
+        do{
+            try fileManager.createDirectoryAtPath(newFolder.path!, withIntermediateDirectories: false, attributes:nil)
+            return true
+        }catch let error as NSError{
+            print(error.description)
+            return false
+        }
+    }
+    
+    static func fetchAllFolder() -> [String]{
+        do{
+            return try DirectoryUtilites.fileManager.contentsOfDirectoryAtPath(kickPaper.path!) as [String]
         }catch let error as NSError{
             print(error.description)
         }
