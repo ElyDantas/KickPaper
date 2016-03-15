@@ -33,6 +33,7 @@ class NewFolderViewController: UIViewController {
             showAlert("Erro", messageTxt: "Nome da matéria está vazio")
         }else{
             if(DirectoryUtilites.createFolder(folderTxt!)){
+                print(" folder foi criada")
                 self.dismissViewControllerAnimated(true, completion:{})
             }else{
                 showAlert("Erro", messageTxt: "Não foi possível criar sua pasta")
@@ -42,7 +43,7 @@ class NewFolderViewController: UIViewController {
     }
     
     func showAlert(titleTxt: String, messageTxt: String ){
-        let alert = UIAlertController(title: titleTxt, message: messageTxt, preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: titleTxt, message: messageTxt, preferredStyle: UIAlertControllerStyle.ActionSheet)
         
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         

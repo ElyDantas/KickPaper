@@ -17,9 +17,8 @@ class FoldersTableViewController: UITableViewController {
         if(!DirectoryUtilites.hasAppFolder()){
             DirectoryUtilites.createBeginFolder()
         }
-
-        folders = DirectoryUtilites.fetchAllFolder()
         
+        self.reloadFolders()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -35,6 +34,42 @@ class FoldersTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    @IBAction func showPromptAlert(sender: AnyObject){
+        let alert = UIAlertController(title: "Criar Nova Matéria", message: "Digite o nome da nova matéria", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+            textField.placeholder = "Nome da matéria"
+            textField.secureTextEntry = false
+        })
+        
+        alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.Default, handler: {
+            (alertAction:UIAlertAction!) in
+            alert.dismissViewControllerAnimated(true, completion: {})
+        }))
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+            (alertAction:UIAlertAction!) in
+            let textf = alert.textFields![0] as UITextField
+            
+            if let text = textf.text{
+                if text != ""{
+                    DirectoryUtilites.createFolder(text)
+                    alert.dismissViewControllerAnimated(true, completion: {})
+                    self.reloadFolders()
+                }
+            }
+        }))
+        
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+
+    }
+    
+    func reloadFolders(){
+        folders = DirectoryUtilites.fetchAllFolder()
+        tableView.reloadData()
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
