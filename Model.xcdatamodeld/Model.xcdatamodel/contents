@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Xcode 7.0">
+    <entity name="Conteudo" representedClassName=".Conteudo" syncable="YES">
+        <attribute name="filePathUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="disciplina" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Disciplina" inverseName="conteudo" inverseEntity="Disciplina" syncable="YES"/>
+    </entity>
+    <entity name="Disciplina" representedClassName=".Disciplina" syncable="YES">
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="conteudo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Conteudo" inverseName="disciplina" inverseEntity="Conteudo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Conteudo" positionX="-405" positionY="-90" width="128" height="88"/>
+        <element name="Disciplina" positionX="-72" positionY="-172" width="128" height="73"/>
+    </elements>
+</model>

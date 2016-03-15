@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Início-->
@@ -85,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="1594" y="456"/>
         </scene>
-        <!--Arquivos-->
+        <!--Gravar Áudio-->
         <scene sceneID="SjF-FO-veN">
             <objects>
-                <viewController id="Xql-GX-QaF" sceneMemberID="viewController">
+                <viewController id="Xql-GX-QaF" customClass="GravarAudioViewController" customModule="KickPaper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cOt-l6-Myb"/>
                         <viewControllerLayoutGuide type="bottom" id="0Ck-b2-vIT"/>
@@ -96,13 +97,132 @@
                     <view key="view" contentMode="scaleToFill" id="zF4-mr-JCE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite aqui o nome da gravação" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PpT-W0-ACZ">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riJ-Hd-9uq">
+                                <rect key="frame" x="265" y="348" width="71" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="Bxc-NI-9vO"/>
+                                    <constraint firstAttribute="height" constant="48" id="YoO-bP-LBg"/>
+                                </constraints>
+                                <state key="normal" image="mic_black"/>
+                                <connections>
+                                    <action selector="recordButton:" destination="Xql-GX-QaF" eventType="touchUpInside" id="7ZR-fl-ycG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PpT-W0-ACZ" firstAttribute="centerX" secondItem="zF4-mr-JCE" secondAttribute="centerX" id="XN2-1Q-2qX"/>
+                            <constraint firstItem="riJ-Hd-9uq" firstAttribute="top" secondItem="PpT-W0-ACZ" secondAttribute="bottom" constant="33" id="aaT-tq-1PB"/>
+                            <constraint firstItem="PpT-W0-ACZ" firstAttribute="centerY" secondItem="zF4-mr-JCE" secondAttribute="centerY" id="f2N-cp-jag"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Arquivos" id="xQo-5m-kfj"/>
+                    <navigationItem key="navigationItem" title="Gravar Áudio" id="xQo-5m-kfj">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Dqh-Mv-naU">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7it-SA-6Tr">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Gravações"/>
+                                <connections>
+                                    <segue destination="Ixp-sR-gVu" kind="show" id="htZ-st-4W9"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nomeGravacaoLabel" destination="PpT-W0-ACZ" id="DQA-yW-24k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3k-bz-1Ts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1557" y="1259"/>
+        </scene>
+        <!--Audio Table View Controller-->
+        <scene sceneID="fmr-gS-LUL">
+            <objects>
+                <tableViewController id="Ixp-sR-gVu" customClass="AudioTableViewController" customModule="KickPaper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="yWp-uY-3K5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gravacoes" rowHeight="65" id="SCd-cN-o1d" customClass="AudioTableViewCell" customModule="KickPaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SCd-cN-o1d" id="QWh-fG-3A5">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="64.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dmB-q2-V63">
+                                            <rect key="frame" x="8" y="21" width="85" height="21"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5R-ZK-aQX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="8" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gravação" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk1-Ca-ztP">
+                                                    <rect key="frame" x="12" y="0.0" width="73" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yRn-vc-wX4">
+                                            <rect key="frame" x="500" y="20" width="92" height="24"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXx-NS-UkM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                    <state key="normal" image="ic_skip_previous"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoH-8C-79L">
+                                                    <rect key="frame" x="34" y="0.0" width="24" height="24"/>
+                                                    <state key="normal" image="ic_play_arrow"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWZ-Jx-JzC">
+                                                    <rect key="frame" x="68" y="0.0" width="24" height="24"/>
+                                                    <state key="normal" image="ic_skip_next"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xoH-8C-79L" firstAttribute="leading" secondItem="bXx-NS-UkM" secondAttribute="trailing" constant="10" id="GB5-ul-Os7"/>
+                                                <constraint firstItem="BWZ-Jx-JzC" firstAttribute="leading" secondItem="xoH-8C-79L" secondAttribute="trailing" constant="10" id="gQY-0B-yg0"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dmB-q2-V63" firstAttribute="top" secondItem="QWh-fG-3A5" secondAttribute="topMargin" constant="13" id="34E-q0-G3L"/>
+                                        <constraint firstItem="yRn-vc-wX4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dmB-q2-V63" secondAttribute="trailing" constant="5" id="RDy-23-rtT"/>
+                                        <constraint firstItem="yRn-vc-wX4" firstAttribute="top" secondItem="QWh-fG-3A5" secondAttribute="topMargin" constant="12" id="bxY-7V-sY8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dmB-q2-V63" secondAttribute="bottom" constant="14.5" id="cZJ-cS-5X2"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="BWZ-Jx-JzC" secondAttribute="trailing" id="h8b-HT-AWo"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yRn-vc-wX4" secondAttribute="bottom" constant="12.5" id="pCC-OY-fmh"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yRn-vc-wX4" secondAttribute="trailing" id="wfr-fQ-6Ic"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="dmB-q2-V63" secondAttribute="leading" id="zOH-kX-Dum"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="gravacaoLabel" destination="Dk1-Ca-ztP" id="j4b-YJ-NG2"/>
+                                    <outlet property="numeroLabel" destination="l5R-ZK-aQX" id="WB2-gb-deq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ixp-sR-gVu" id="VJN-8v-0KC"/>
+                            <outlet property="delegate" destination="Ixp-sR-gVu" id="uxP-Z9-tFX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJb-Vm-1fc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2350" y="1261"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -162,11 +282,11 @@
             </objects>
             <point key="canvasLocation" x="782" y="456"/>
         </scene>
-        <!--Pastas-->
+        <!--Áudio-->
         <scene sceneID="960-rn-5bS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gcs-hz-hgz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pastas" image="folder-7" id="876-hs-iGZ"/>
+                    <tabBarItem key="tabBarItem" title="Áudio" image="ic_music_note" id="876-hs-iGZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WAS-nY-hj5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -184,7 +304,11 @@
     </scenes>
     <resources>
         <image name="camera-7" width="30" height="30"/>
-        <image name="folder-7" width="30" height="30"/>
-        <image name="home-7" width="30" height="30"/>
+        <image name="home-7" width="512" height="512"/>
+        <image name="ic_music_note" width="24" height="24"/>
+        <image name="ic_play_arrow" width="24" height="24"/>
+        <image name="ic_skip_next" width="24" height="24"/>
+        <image name="ic_skip_previous" width="24" height="24"/>
+        <image name="mic_black" width="512" height="512"/>
     </resources>
 </document>

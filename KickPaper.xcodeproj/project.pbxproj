@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6901E41C98920F00DFCF54 /* ConteudoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6901E31C98920F00DFCF54 /* ConteudoDAO.swift */; };
+		3F6901E61C98951000DFCF54 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6901E51C98951000DFCF54 /* DatabaseManager.swift */; };
+		3F69020B1C989D4900DFCF54 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F6902091C989D4900DFCF54 /* Model.xcdatamodeld */; };
+		3F6902101C989E2900DFCF54 /* Conteudo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69020C1C989E2900DFCF54 /* Conteudo+CoreDataProperties.swift */; };
+		3F6902111C989E2900DFCF54 /* Conteudo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69020D1C989E2900DFCF54 /* Conteudo.swift */; };
+		3F6902121C989E2900DFCF54 /* Disciplina+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69020E1C989E2900DFCF54 /* Disciplina+CoreDataProperties.swift */; };
+		3F6902131C989E2900DFCF54 /* Disciplina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69020F1C989E2900DFCF54 /* Disciplina.swift */; };
+		3F6902151C989EE100DFCF54 /* DisciplinaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6902141C989EE100DFCF54 /* DisciplinaDAO.swift */; };
+		3FC66BE51C975C1100DA1F3F /* GravarAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC66BE41C975C1100DA1F3F /* GravarAudioViewController.swift */; };
+		3FC72A221C97433B00D976F0 /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC72A211C97433B00D976F0 /* AudioTableViewCell.swift */; };
+		3FC72A241C97434D00D976F0 /* AudioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC72A231C97434D00D976F0 /* AudioTableViewController.swift */; };
 		7401A9161C92803B006C70D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401A9151C92803B006C70D8 /* AppDelegate.swift */; };
 		7401A9181C92803B006C70D8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401A9171C92803B006C70D8 /* FirstViewController.swift */; };
 		7401A91A1C92803B006C70D8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401A9191C92803B006C70D8 /* SecondViewController.swift */; };
@@ -35,6 +46,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F6901E31C98920F00DFCF54 /* ConteudoDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudoDAO.swift; sourceTree = "<group>"; };
+		3F6901E51C98951000DFCF54 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		3F69020A1C989D4900DFCF54 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		3F69020C1C989E2900DFCF54 /* Conteudo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Conteudo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3F69020D1C989E2900DFCF54 /* Conteudo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conteudo.swift; sourceTree = "<group>"; };
+		3F69020E1C989E2900DFCF54 /* Disciplina+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Disciplina+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3F69020F1C989E2900DFCF54 /* Disciplina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disciplina.swift; sourceTree = "<group>"; };
+		3F6902141C989EE100DFCF54 /* DisciplinaDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinaDAO.swift; sourceTree = "<group>"; };
+		3FC66BE41C975C1100DA1F3F /* GravarAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravarAudioViewController.swift; sourceTree = "<group>"; };
+		3FC72A211C97433B00D976F0 /* AudioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
+		3FC72A231C97434D00D976F0 /* AudioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTableViewController.swift; sourceTree = "<group>"; };
 		7401A9121C92803B006C70D8 /* KickPaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickPaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7401A9151C92803B006C70D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7401A9171C92803B006C70D8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +98,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F6901E11C9891CF00DFCF54 /* VO */ = {
+			isa = PBXGroup;
+			children = (
+				3F69020C1C989E2900DFCF54 /* Conteudo+CoreDataProperties.swift */,
+				3F69020D1C989E2900DFCF54 /* Conteudo.swift */,
+				3F69020E1C989E2900DFCF54 /* Disciplina+CoreDataProperties.swift */,
+				3F69020F1C989E2900DFCF54 /* Disciplina.swift */,
+			);
+			name = VO;
+			sourceTree = "<group>";
+		};
+		3F6901E21C9891D400DFCF54 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				3F6901E31C98920F00DFCF54 /* ConteudoDAO.swift */,
+				3F6902141C989EE100DFCF54 /* DisciplinaDAO.swift */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		3FC72A1C1C97376600D976F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F6901E11C9891CF00DFCF54 /* VO */,
+				3F6901E21C9891D400DFCF54 /* DAO */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3FC72A1D1C97376B00D976F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7401A91B1C92803B006C70D8 /* Main.storyboard */,
+				7401A9201C92803C006C70D8 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3FC72A1E1C97376F00D976F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7401A9171C92803B006C70D8 /* FirstViewController.swift */,
+				7401A9191C92803B006C70D8 /* SecondViewController.swift */,
+				3FC72A211C97433B00D976F0 /* AudioTableViewCell.swift */,
+				3FC72A231C97434D00D976F0 /* AudioTableViewController.swift */,
+				3FC66BE41C975C1100DA1F3F /* GravarAudioViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		7401A9091C92803B006C70D8 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +171,13 @@
 		7401A9141C92803B006C70D8 /* KickPaper */ = {
 			isa = PBXGroup;
 			children = (
+				3FC72A1E1C97376F00D976F0 /* Controller */,
+				3FC72A1D1C97376B00D976F0 /* View */,
+				3FC72A1C1C97376600D976F0 /* Model */,
 				7401A9151C92803B006C70D8 /* AppDelegate.swift */,
-				7401A9171C92803B006C70D8 /* FirstViewController.swift */,
-				7401A9191C92803B006C70D8 /* SecondViewController.swift */,
-				7401A91B1C92803B006C70D8 /* Main.storyboard */,
+				3F6902091C989D4900DFCF54 /* Model.xcdatamodeld */,
+				3F6901E51C98951000DFCF54 /* DatabaseManager.swift */,
 				7401A91E1C92803C006C70D8 /* Assets.xcassets */,
-				7401A9201C92803C006C70D8 /* LaunchScreen.storyboard */,
 				7401A9231C92803C006C70D8 /* Info.plist */,
 			);
 			path = KickPaper;
@@ -196,7 +269,7 @@
 				TargetAttributes = {
 					7401A9111C92803B006C70D8 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 8N84EEX5L2;
+						DevelopmentTeam = 6QLK855DAC;
 					};
 					7401A9271C92803C006C70D8 = {
 						CreatedOnToolsVersion = 7.2;
@@ -262,9 +335,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6902151C989EE100DFCF54 /* DisciplinaDAO.swift in Sources */,
+				3FC72A221C97433B00D976F0 /* AudioTableViewCell.swift in Sources */,
+				3F6901E61C98951000DFCF54 /* DatabaseManager.swift in Sources */,
 				7401A91A1C92803B006C70D8 /* SecondViewController.swift in Sources */,
+				3FC72A241C97434D00D976F0 /* AudioTableViewController.swift in Sources */,
 				7401A9161C92803B006C70D8 /* AppDelegate.swift in Sources */,
+				3F6902121C989E2900DFCF54 /* Disciplina+CoreDataProperties.swift in Sources */,
+				3F6902111C989E2900DFCF54 /* Conteudo.swift in Sources */,
+				3F69020B1C989D4900DFCF54 /* Model.xcdatamodeld in Sources */,
+				3F6901E41C98920F00DFCF54 /* ConteudoDAO.swift in Sources */,
+				3FC66BE51C975C1100DA1F3F /* GravarAudioViewController.swift in Sources */,
+				3F6902101C989E2900DFCF54 /* Conteudo+CoreDataProperties.swift in Sources */,
 				7401A9181C92803B006C70D8 /* FirstViewController.swift in Sources */,
+				3F6902131C989E2900DFCF54 /* Disciplina.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,10 +490,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KickPaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thecodeisonthetable.com.br.KickPaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -417,10 +504,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KickPaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thecodeisonthetable.com.br.KickPaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -491,6 +581,7 @@
 				7401A93E1C92803C006C70D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7401A93F1C92803C006C70D8 /* Build configuration list for PBXNativeTarget "KickPaperTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +590,7 @@
 				7401A9411C92803C006C70D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7401A9421C92803C006C70D8 /* Build configuration list for PBXNativeTarget "KickPaperUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,8 +599,23 @@
 				7401A9441C92803C006C70D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3F6902091C989D4900DFCF54 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3F69020A1C989D4900DFCF54 /* Model.xcdatamodel */,
+			);
+			currentVersion = 3F69020A1C989D4900DFCF54 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7401A90A1C92803B006C70D8 /* Project object */;
 }
