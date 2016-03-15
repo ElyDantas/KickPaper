@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Início-->
@@ -57,6 +58,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
                                 <rect key="frame" x="195" y="279" width="210" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,16 +72,40 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+=======
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2qm-mq-8rn">
+                                <rect key="frame" x="20" y="64" width="560" height="487"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="vyn-Zg-65f">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="439"/>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgb-u5-6ZW" userLabel="registrarConteudo">
+                                        <rect key="frame" x="0.0" y="439" width="560" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="3wu-et-fCG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" image="ic_camera_black-2"/>
+                                        <connections>
+                                            <action selector="registrarConteudo:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="3po-xe-SdP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+>>>>>>> dacc0db3a444cf7e04fc6fb6b434a0c8d43dd733
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="2qm-mq-8rn" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="9a2-lv-ITf"/>
+                            <constraint firstItem="2qm-mq-8rn" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="FVi-2j-Igg"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="2qm-mq-8rn" secondAttribute="bottom" id="eAw-hf-RmT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2qm-mq-8rn" secondAttribute="trailing" id="s1J-Rm-L4Q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="VUh-dX-hB2"/>
+                    <connections>
+                        <outlet property="listaDeDisciplinas" destination="vyn-Zg-65f" id="hjh-rg-Yh2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,5 +212,6 @@
         <image name="camera-7" width="30" height="30"/>
         <image name="folder-7" width="30" height="30"/>
         <image name="home-7" width="30" height="30"/>
+        <image name="ic_camera_black-2" width="48" height="48"/>
     </resources>
 </document>
