@@ -29,6 +29,7 @@
 		7401A9221C92803C006C70D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7401A9201C92803C006C70D8 /* LaunchScreen.storyboard */; };
 		7401A92D1C92803C006C70D8 /* KickPaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401A92C1C92803C006C70D8 /* KickPaperTests.swift */; };
 		7401A9381C92803C006C70D8 /* KickPaperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401A9371C92803C006C70D8 /* KickPaperUITests.swift */; };
+		74064AD71C9904C1008CFCF0 /* ContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74064AD61C9904C1008CFCF0 /* ContentTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		7401A9331C92803C006C70D8 /* KickPaperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KickPaperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7401A9371C92803C006C70D8 /* KickPaperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickPaperUITests.swift; sourceTree = "<group>"; };
 		7401A9391C92803C006C70D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74064AD61C9904C1008CFCF0 /* ContentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			children = (
 				3F27E6BF1C98B1150041BF78 /* DirectoryUtilites.swift */,
 				3F27E6BB1C98B1030041BF78 /* FoldersTableViewController.swift */,
+				74064AD61C9904C1008CFCF0 /* ContentTableViewController.swift */,
 				3F27E6BC1C98B1030041BF78 /* NewFolderViewController.swift */,
 				7401A9171C92803B006C70D8 /* FirstViewController.swift */,
 				7401A9191C92803B006C70D8 /* SecondViewController.swift */,
@@ -346,6 +349,7 @@
 			files = (
 				3F27E6C01C98B1150041BF78 /* DirectoryUtilites.swift in Sources */,
 				3F27E6BD1C98B1030041BF78 /* FoldersTableViewController.swift in Sources */,
+				74064AD71C9904C1008CFCF0 /* ContentTableViewController.swift in Sources */,
 				3F6902151C989EE100DFCF54 /* DisciplinaDAO.swift in Sources */,
 				3FC72A221C97433B00D976F0 /* AudioTableViewCell.swift in Sources */,
 				3F6901E61C98951000DFCF54 /* DatabaseManager.swift in Sources */,

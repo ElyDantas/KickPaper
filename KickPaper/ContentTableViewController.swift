@@ -1,24 +1,28 @@
 //
-//  FoldersTableViewController.swift
+//  ContentTableViewController.swift
 //  KickPaper
 //
-//  Created by Student on 3/14/16.
+//  Created by Jouderian Ferreira Nobre Junior on 3/16/16.
 //  Copyright © 2016 Jouderian Ferreira Nobre Junior. All rights reserved.
 //
 
 import UIKit
 
-class FoldersTableViewController: UITableViewController {
-    var folders = [Disciplina]()
+class ContentTableViewController: UITableViewController {
+
+    var disciplina:Disciplina?
+    var conteudos = [Conteudo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        if(!DirectoryUtilites.hasAppFolder()){
-            DirectoryUtilites.createBeginFolder()
+        
+        if let disciplina = self.disciplina{
+            self.title = disciplina.nome
+        
+            conteudos = disciplina.conteudo?.allObjects as! [Conteudo]
         }
         
-        self.reloadFolders()
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -34,45 +38,6 @@ class FoldersTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    @IBAction func showPromptAlert(sender: AnyObject){
-        let alert = UIAlertController(title: "Criar Nova Matéria", message: "Digite o nome da nova matéria", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
-            textField.placeholder = "Nome da matéria"
-            textField.secureTextEntry = false
-        })
-        
-        alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.Default, handler: {
-            (alertAction:UIAlertAction!) in
-            alert.dismissViewControllerAnimated(true, completion: {})
-        }))
-        
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
-            (alertAction:UIAlertAction!) in
-            let textf = alert.textFields![0] as UITextField
-            
-            if let text = textf.text{
-                if text != ""{
-                    let disciplina = Disciplina()
-                    disciplina.nome = text
-                    DisciplinaDAO.insert(disciplina)
-
-                    alert.dismissViewControllerAnimated(true, completion: {})
-                    self.reloadFolders()
-                }
-            }
-        }))
-        
-        
-        self.presentViewController(alert, animated: true, completion: nil)
-
-    }
-    
-    func reloadFolders(){
-        folders = DisciplinaDAO.fetchAllDisciplinas()
-        tableView.reloadData()
-    }
-    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -80,28 +45,24 @@ class FoldersTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return folders.count
+        return self.conteudos.count
+//        return 5
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("foldersTableCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("contentCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = folders[indexPath.row].nome
-        
         // Configure the cell...
+        
+        cell.textLabel?.text = self.conteudos[indexPath.row].title
+        cell.detailTextLabel?.text = self.conteudos[indexPath.row].filePathUrl
+
+//        cell.textLabel?.text = "self.conteudos[indexPath.row].title"
+//        cell.detailTextLabel?.text = "self.conteudos[indexPath.row].filePathUrl"
 
         return cell
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destination = segue.destinationViewController as? ContentTableViewController {
-            if let disciplineIndex = tableView.indexPathForSelectedRow?.row {
-//                destination.conteudos = folders[disciplineIndex]
-                destination.disciplina = folders[disciplineIndex]
-            }
-        }
-    }
-    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
